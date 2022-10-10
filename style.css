@@ -1,0 +1,41 @@
+*{
+    font-family: 'Lora', serif;
+}
+img{
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    height: 150px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.game{
+    width: 900px;
+    font-size: 0;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: rgb(129, 126, 126);
+}
+h2{
+    text-align: center;
+    color: rgb(129, 126, 126);
+}
+body{
+    background-image: url(og_og_148263946929403779.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+img:hover{
+    /* transform: scale(1.5); */
+    filter: brightness(2);
+}
