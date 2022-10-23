@@ -1,7 +1,8 @@
-*{
+* {
     font-family: 'Lora', serif;
 }
-img{
+
+img {
     display: inline-block;
     width: 150px;
     overflow: hidden;
@@ -11,31 +12,62 @@ img{
     border-radius: 50px;
     transition: 0.5s;
 }
-.game{
+
+.game {
     width: 900px;
     font-size: 0;
     margin: auto;
 }
-h1{
+
+h1 {
     text-align: center;
     color: rgb(129, 126, 126);
 }
-h2{
+
+h2 {
     text-align: center;
     color: rgb(129, 126, 126);
 }
-body{
+
+body {
     background-image: url(og_og_148263946929403779.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
-img:hover{
+
+img:hover {
     /* transform: scale(1.5); */
     filter: brightness(2);
+}
+
+a {
+    font-size: 30px;
+    border-radius: 10px;
+    color: white;
+    background: rgb(75, 156, 61);
+    background: radial-gradient(circle, rgba(75, 156, 61, 1) 0%, rgba(51, 30, 255, 1) 11%, rgba(125, 86, 203, 1) 21%, rgba(255, 53, 176, 1) 31%, rgba(255, 9, 132, 1) 38%, rgba(255, 9, 132, 1) 53%, rgba(136, 97, 3, 1) 68%, rgba(150, 255, 169, 1) 96%);
+    padding: 5px;
+    background-size: 300% 100%;
+    text-decoration: none;
+    transition: 1s;
+    text-align: center;
+}
+
+.div {
+    margin-top: 20px;
+    text-align: center;
+}
+a:hover{
+    background-position: right;
 }

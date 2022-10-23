@@ -1,3 +1,4 @@
+let newGame = document.getElementsByClassName("newGame")[0];
 let game = document.getElementsByClassName("game")[0];
 let polisorb = document.getElementsByClassName("polisorb")[0]
 let rybashka = "galaktika-fonari.jpg"
@@ -12,12 +13,16 @@ for (let i = 0; i < 12; i = i + 1) {
     images.push("i (" + i + ").webp")
     images.push("i (" + i + ").webp")
 }
-for (let i = images.length - 1; i > 0; i = i - 1) {
-    let random = Math.floor(Math.random() * (i + 1))
-    let vremenna9 = images[i]
-    images[i] = images[random]
-    images[random] = vremenna9
+function randomimages() {
+    for (let i = images.length - 1; i > 0; i = i - 1) {
+        let random = Math.floor(Math.random() * (i + 1))
+        let vremenna9 = images[i]
+        images[i] = images[random]
+        images[random] = vremenna9
+    }
 }
+randomimages()
+
 console.log(images);
 for (let i = 0; i < 24; i = i + 1) {
     // console.log(i);
@@ -48,7 +53,7 @@ for (let i = 0; i < 24; i = i + 1) {
                     openedimages = []
                     if (winsCounter == 12) {
                         zagolovok.innerHTML = "Победа"
-                        polisorb.innerHTML = "Попытки" + steps
+                        polisorb.innerHTML = "Попытки: " + steps
                     }
                 }
                 else {
@@ -68,7 +73,7 @@ for (let i = 0; i < 24; i = i + 1) {
                             }
                         }
                     }, 1000)
-
+                      
                 }
             }
         }
@@ -78,6 +83,7 @@ for (let i = 0; i < 24; i = i + 1) {
 function flipImage(img, src) {
     img.src = src
 }
+
 zagolovok.onclick = function (event) {
     for (let i = 0; i < 24; i = i + 1) {
         let img = document.getElementsByTagName("img")[i]
@@ -92,3 +98,21 @@ console.log(images[23]);
 if(images[23] === "i (7).webp"){
     zagolovok.innerHTML = "Анонимус"
 }
+newGame.onclick = function  (event) {
+    counter= 0
+    steps = 0
+    winsCounter = 0
+    polisorb.innerHTML = "Удачи"
+    zagolovok.innerHTML = "найди пару карт"
+    randomimages()
+    let cards = document.getElementsByTagName("img")
+    for (let i = 0; i<24; i=i+1){
+       console.log(i)
+       cards[i].src=rybashka
+       cards[i].style.pointerEvents = "auto"
+    }
+    // for (let i = 18; i<24; i=i+1){
+    //      cards[i].style.border = "1px solid white"
+    // }
+    // polisorb =  0
+}   
